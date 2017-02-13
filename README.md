@@ -34,3 +34,5 @@ Compile o JS e o SASS usando o webpack usando o comando
 ```
 $ webpack
 ```
+
+Agora basta acessar o arquivo index.html para visualizar o projeto! :)
