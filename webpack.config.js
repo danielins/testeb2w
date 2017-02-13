@@ -24,5 +24,10 @@ module.exports = {
 			test: /\.png|gif$/,
 			loaders: ['file-loader']
 		}]
+	},
+	devServer: {
+		port: 4000,
+		contentBase: 'public',
+		historyApiFallback: true,
 	}
 }
