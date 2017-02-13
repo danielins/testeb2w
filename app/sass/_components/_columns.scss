@@ -1,0 +1,51 @@
+/*
+ * columns.scss
+ * Colunas da página
+ */
+
+.columns { 
+	display: flex;
+}
+
+.column {
+	width: 50%;
+	padding: 90px 25px 50px;
+
+	&--theme-1 {
+		
+		.info {
+			margin-left: auto;
+			margin-right: 0;
+		}
+
+	}
+
+	&--theme-2 {
+		padding-left: 60px;
+
+		.info {
+			max-width: 575px;
+		}
+	}
+
+}
+
+// Responsivo
+// ========================================
+@media all and (max-width: 1020px) {
+	.columns {
+		display: block;
+
+		.column {
+			clear: both;
+			width: 100%;
+			
+			padding-left: 25px;
+			
+			.info {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+* {
+	margin: 0; padding: 0; border: none; outline: 0;
+	color: inherit;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: normal;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	
+	&:active, &:hover {
+		outline: 0;
+	}
+}
+
+img {
+	border-style: none;
+}
+
+img, svg, video {
+	max-width: 100%;
+	height: auto;
+}
+
+svg {
+	max-height: 100%;
+	&:not(:root) {
+		overflow: hidden;
+	}
+}
+
+.svg {
+	display: none;
+}
+
+progress[value] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}

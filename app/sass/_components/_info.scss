@@ -1,0 +1,51 @@
+/*
+ * info.scss
+ * Container das seções do curriculo
+ */
+
+.info {
+	margin-bottom: 50px;
+	max-width: 490px;
+	width: 95%;
+
+	&__heading {
+		font-size: 0;
+		line-height: 0;
+		line-height: 75px;
+		margin-bottom: 25px;
+		text-transform: uppercase;
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&__ico {
+			border-radius: 5px 0 5px 0;
+			content: '';
+			margin-right: 25px;
+			height: 75px;
+			width: 75px;
+		}
+
+	}
+
+	&_text {
+		text-align: justify;
+		text-transform: lowercase;
+	}
+
+	@media all and (max-width: 768px) {
+		&__heading {
+			line-height: 1.2;
+
+			span {
+				display: block;
+				margin: 0 auto 10px;
+				text-align: center;
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,107 @@
+/**
+ * pelette.scss
+ * Declaração das cores da página
+ */
+
+
+// Base colors
+// ===========================================
+$white: #fff;
+$black: #000100;
+$gray: #a6a5a5;
+$green: #49c5b1;
+
+
+// Lista dos diferentes temas (um para cada coluna)
+// ===========================================
+$palettes: (
+	theme-1: (
+		background: $green,
+		title: $white,
+		title-ico: $green,
+		text: $white,
+		progress_value: $gray,
+		progress_background: $white,
+		timeline_title: $white,
+		timeline_location: $white,
+		timeline_text: $white
+	),
+	theme-2: (
+		background: $white,
+		title: $green,
+		title-ico: $white,
+		text: $gray,
+		progress_value: $green,
+		progress_background: $gray,
+		timeline_title: $black,
+		timeline_location: $black,
+		timeline_text: $black
+	)
+);
+
+
+// Estilos
+// ===========================================
+
+// loop pelos temas
+@each $label, $palette in $palettes {
+
+	// variaveis locais
+
+	// base colors
+	$background: map-get($palette, background);
+	$color: map-get($palette, text);
+	$title: map-get($palette, title);
+	$title-ico: map-get($palette, title-ico);
+
+	// barras de progresso
+	$progress_value: map-get($palette, progress_value);
+	$progress_background: map-get($palette, progress_background);
+
+	// timelines
+	$timeline_title: map-get($palette, timeline_title);
+	$timeline_location: map-get($palette, timeline_location);
+	$timeline_text: map-get($palette, timeline_text);
+
+	.column--#{$label} {
+		// base
+		background: $background;
+		color: $color;
+
+		.info__heading {
+			span {
+				color: $title;
+			}
+			// icones dos titulos das seções
+			&__ico {
+				background-color: $title;
+				svg {
+					fill: $title-ico;
+				}
+			}
+		}
+
+		// barra de progresso
+		progress[value]::-webkit-progress-bar{
+			background-color: $progress_background;
+		}
+		progress[value]::-webkit-progress-value{
+			background-color: $progress_value;
+		}
+
+		// timeline
+		.timeline-list {
+			&__time, &__text {
+				color: $timeline_text;
+			}
+			&__title {
+				color: $timeline_title;
+			}
+			&__location {
+				color: $timeline_location;
+			}
+		}
+
+	}
+
+}

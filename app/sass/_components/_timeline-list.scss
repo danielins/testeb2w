@@ -1,0 +1,59 @@
+/*
+ * timeline-list.scss
+ * Lista com eventos em linha do tempo
+ */
+
+.timeline-list {
+
+	&__item {
+		font-size: 0;
+		margin-bottom: 30px;
+	}
+
+	&__time, &__text {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__time {
+		text-align: center;
+		margin-right: 20px;
+		width: 80px;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		text-transform: uppercase;
+	}
+
+	&__location {
+		display: block;
+		text-transform: capitalize;
+	}
+
+	&__text {
+		font-size: 24px;
+		max-width: calc(100% - 100px);
+		width: 100%;
+	}
+
+	@media all and (max-width: 500px) {
+
+		&__time, &__text {
+			display: block;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		&__time {
+			margin-bottom: 10px;
+			text-align: center;
+		}
+
+		&__text {
+			text-align: left;
+		}
+
+	}
+
+}

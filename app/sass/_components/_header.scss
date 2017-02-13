@@ -1,0 +1,28 @@
+/*
+ * header.scss
+ * Caçalho da página {avatar, nome, cargo}
+ */
+
+$headers: "profile", "objective", "personal-skill", "contact-me", "education", "experience", "professional-skill", "award";
+
+.main-header {
+	text-align: center;
+
+	&__avatar {
+		border-radius: 5px 0 5px 0;
+		width: 275px; height: 275px;
+		margin-bottom: 30px;
+	}
+}
+
+
+// Icones dos titulos
+@each $section in $headers {
+	.info__heading--#{$section} .info__heading__ico {
+		background: {
+			image: url("./assets/png/ico-#{ $section }.png");
+			repeat: no-repeat;
+			position: center center;
+		}
+	}
+}

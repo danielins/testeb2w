@@ -1,0 +1,46 @@
+/*
+ * contact-list.scss
+ * Lista de meios de contato
+ */
+
+$contacts: "address", "tel", "email", "website";
+
+// Ícones dos meios de contato
+.contact-list__item {
+	font-size: 0;
+	line-height: 20px;
+	margin-bottom: 10px;
+
+	&:before {
+		background: {
+			repeat: no-repeat;
+			position: center center;
+		}
+		content: '';
+		display: inline-block;
+		margin-right: 30px;
+		width: 25px; height: 25px;
+	}
+
+	// Icones dos contatos
+	@each $contact in $contacts {
+		&-#{ $contact } {
+			&:before {
+				background-image: url("./assets/png/ico-contact-#{ $contact }.png");
+			}
+		}
+	}
+
+	&:before, span, a {
+		vertical-align: middle;
+	}
+
+	span, a {
+		font-size: 23.66px;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+}

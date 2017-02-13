@@ -1,0 +1,23 @@
+
+// Imports
+// ==========================
+@import "_reset/reset.scss";
+@import "_fonts/fonts.scss";
+@import "_palette/palette.scss";
+
+@import "_components/columns.scss";
+@import "_components/info.scss";
+@import "_components/header.scss";
+@import "_components/progress-list.scss";
+@import "_components/contact-list.scss";
+@import "_components/timeline-list.scss";
+
+
+.main-loading {
+	background: url('./assets/gif/loading.gif') no-repeat;
+	display: block;
+	position: fixed;
+	top: 50%; left: 50%;
+	width: 186px; height: 186px;
+	transform: translate(-50%, -50%);
+}
